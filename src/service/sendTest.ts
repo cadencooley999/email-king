@@ -13,7 +13,6 @@ interface SendEmailProps {
 const sendTestEmail = httpsCallable(functions, "sendTestEmail");
 
 export const sendTest = async (props: SendEmailProps) => {
-  console.log(props)
   return await sendTestEmail({
     accessToken: props.accessToken,
     to: props.to,

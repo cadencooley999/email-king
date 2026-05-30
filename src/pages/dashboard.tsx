@@ -22,7 +22,6 @@ function Dashboard({userEmail, setUserEmail, setAccessToken}: DashboardProps) {
 
       setUserEmail(user?.email || "")
       setAccessToken(accessToken || "")
-      console.log(user.email, accessToken)
     } catch (err) {
       console.error(err)
     }
