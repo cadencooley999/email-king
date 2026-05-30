@@ -1,3 +1,5 @@
+https://email-5612e.web.app
+
 # Email King
 
 Bulk email sender using Firebase Functions + Microsoft Graph API.
