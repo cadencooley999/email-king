@@ -1,0 +1,209 @@
+/* ────────────────────────────────────────────────────────── */
+/* CONTAINER */
+/* ────────────────────────────────────────────────────────── */
+
+.recipient-table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* HEADER */
+/* ────────────────────────────────────────────────────────── */
+
+.recipient-table-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.recipient-table-header h2 {
+  margin: 0;
+  color: #212C65;
+  font-size: 1.25rem;
+}
+
+.recipient-table-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.csv-button {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #dce3f0;
+  border-radius: 9px;
+  background: white;
+  color: #212C65;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 6px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+}
+/* ────────────────────────────────────────────────────────── */
+/* CSV BUTTON */
+/* ────────────────────────────────────────────────────────── */
+
+.csv-button {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #dce3f0;
+  border-radius: 9px;
+  background: white;
+  color: #212C65;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+}
+
+.csv-button:hover {
+  background: #A0CC3A;
+  color: white;
+  border-color: #A0CC3A;
+  transform: translateY(-1px);
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* TABLE */
+/* ────────────────────────────────────────────────────────── */
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dfe5f2;
+  border-radius: 14px;
+  background: white;
+}
+
+.recipient-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* HEADERS */
+/* ────────────────────────────────────────────────────────── */
+
+.recipient-table thead {
+  background: #f5f7fb;
+}
+
+.recipient-table th {
+  text-align: left;
+  padding: 14px 16px;
+  color: #212C65;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e9f2;
+  white-space: nowrap;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* CELLS */
+/* ────────────────────────────────────────────────────────── */
+
+.recipient-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.recipient-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* INPUTS */
+/* ────────────────────────────────────────────────────────── */
+
+.recipient-table input {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #dce3f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.recipient-table input:focus {
+  outline: none;
+  border-color: #28B24B;
+  box-shadow: 0 0 0 4px rgba(40, 178, 75, 0.10);
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* ROW ACTIONS */
+/* ────────────────────────────────────────────────────────── */
+
+.row-actions-cell {
+  width: 110px;
+  min-width: 110px;
+  padding: 8px 12px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.row-actions-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-row-button,
+.remove-row-button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.add-row-button {
+  background: #212C65;
+}
+
+.add-row-button:hover {
+  background: #28B24B;
+  transform: translateY(-1px);
+}
+
+.remove-row-button {
+  background: #e54848;
+}
+
+.remove-row-button:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}

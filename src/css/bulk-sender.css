@@ -1,0 +1,499 @@
+:root {
+  --lime: #A0CC3A;
+  --green: #28B24B;
+  --blue: #212C65;
+  --light-bg: #f5f7fb;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* PAGE */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-sender-page {
+  min-height: 100vh;
+  background: var(--light-bg);
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+}
+
+.bulk-content-width {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* TOP BAR */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  padding: 14px 0 18px;
+
+  background: var(--light-bg);
+
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  background: rgba(245, 247, 251, 0.88);
+}
+
+.bulk-title-group h1 {
+  margin: 0;
+  color: var(--blue);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.bulk-title-group p {
+  margin-top: 6px;
+  color: #667085;
+  font-size: 0.95rem;
+}
+
+.bulk-email-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 280px;
+}
+
+.bulk-email-input label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.bulk-email-input input {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 2px solid #d9dfec;
+  background: white;
+  font-size: 0.92rem;
+  transition: 0.2s;
+}
+
+.bulk-email-input input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(40, 178, 75, 0.12);
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* EDITOR SECTION */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.bulk-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.bulk-section-header h2 {
+  margin: 0;
+  color: var(--blue);
+  font-size: 1.25rem;
+}
+
+.bulk-section-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* ACTION BUTTONS */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.bulk-actions button {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #dce3f0;
+  border-radius: 9px;
+  background: white;
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+}
+
+.bulk-actions button:hover {
+  background: var(--lime);
+  color: white;
+  border-color: var(--lime);
+  transform: translateY(-1px);
+}
+
+.bulk-actions .danger-button:hover {
+  background: #d93030;
+  border-color: #d93030;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* RECIPIENT SECTION */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-recipient-section {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* PREVIEW SECTION */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  margin-top: 30px;
+}
+
+/* Button */
+
+.preview-button {
+  height: 38px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dce3f0;
+  border-radius: 9px;
+
+  background: white;
+  color: #212C65;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+
+  width: fit-content;
+
+  margin-bottom: 8px;
+}
+
+.preview-button:hover {
+  background: #A0CC3A;
+  color: white;
+  border-color: #A0CC3A;
+
+  transform: translateY(-1px);
+}
+
+/* Card */
+
+.email-preview-card {
+  background: white;
+
+  border: 1px solid #dfe5f2;
+  border-radius: 16px;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+/* Rows */
+
+.preview-row {
+  display: flex;
+  gap: 12px;
+
+  align-items: center;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #edf1f7;
+
+  font-size: 0.92rem;
+}
+
+.preview-label {
+  width: 70px;
+
+  font-weight: 700;
+
+  color: #212C65;
+
+  flex-shrink: 0;
+}
+
+/* Body */
+
+.preview-body {
+  min-height: 180px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e7edf6;
+
+  overflow-x: auto;
+}
+
+.preview-body * {
+  max-width: 100%;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* SEND SECTION */
+/* ────────────────────────────────────────────────────────── */
+
+.bulk-send-section {
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 12px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Header */
+
+.bulk-send-section .bulk-section-header h2 {
+  margin: 0;
+
+  color: #212C65;
+
+  font-size: 1.35rem;
+}
+
+.bulk-send-section .bulk-section-header p {
+  margin-top: 4px;
+
+  color: #667085;
+
+  font-size: 0.92rem;
+
+  line-height: 1.5;
+}
+
+/* Actions row */
+
+.send-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+/* Shared button styles */
+
+.send-test-button,
+.send-all-button {
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Test */
+
+.send-test-button {
+  background: var(--blue);
+  color: white;
+  border: none;
+}
+
+.send-test-button:hover {
+  opacity: 0.92;
+}
+
+/* Send all */
+
+.send-all-button {
+  background: #28B24B;
+
+  color: white;
+
+  box-shadow: 0 6px 18px rgba(40, 178, 75, 0.18);
+}
+
+.send-all-button:hover {
+  background: #239742;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 10px 24px rgba(40, 178, 75, 0.24);
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .send-actions {
+    width: 100%;
+  }
+
+  .send-test-button,
+  .send-all-button {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* RESPONSIVE */
+/* ────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .bulk-topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bulk-email-input {
+    width: 100%;
+  }
+}
+
+.bulk-progress-container {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #e3e3e3;
+}
+
+.bulk-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.bulk-progress-bar {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e9edf0;
+}
+
+.bulk-progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--lime),
+    var(--green)
+  );
+
+  transition: width 0.25s ease;
+}
+
+.bulk-progress-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.cancel-send-button {
+  background: #d64545;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.cancel-send-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.bulk-complete-message {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(40, 178, 75, 0.12);
+  color: var(--green);
+  font-weight: 600;
+  text-align: center;
+}
+
+.bulk-cancelled-message {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(178, 98, 40, 0.12);
+  color: rgb(178, 52, 40);
+  font-weight: 600;
+  text-align: center;
+}
